@@ -32,15 +32,6 @@
             "text": "Teks atau perintah untuk chat AI",
             "model": "See the list of supported AI models here: https://mind.hydrooo.web.id"
           }
-        },
-        {
-          "name": "UnlimitedAI",
-          "desc": "AI tanpa limit (scraping unlimitedai.org)",
-          "path": "/ai/unlimitedai?text=",
-          "status": "ready",
-          "params": {
-            "text": "Pertanyaan atau perintah ke AI"
-          }
         }
       ]
     },
