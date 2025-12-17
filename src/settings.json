@@ -56,7 +56,16 @@
           "params": {
             "url": "YouTube video URL"
           }
-        }
+        },
+        {
+  "name": "YouTube Video",
+  "desc": "Download video from YouTube (mp4)",
+  "path": "/downloader/ytmp4?url=",
+  "status": "ready",
+  "params": {
+    "url": "YouTube video URL"
+  }
+}
       ]
     },
 
@@ -206,4 +215,4 @@
       ]
     }
   ]
-}
+        }
