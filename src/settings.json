@@ -54,87 +54,40 @@
     {
       "name": "Game",
       "items": [
-        {
-          "name": "Asah Otak",
-          "desc": "Game soal pengetahuan umum (random)",
-          "path": "/game/asahotak",
-          "status": "ready",
-          "params": {}
-        },
-        {
-          "name": "Cak Lontong",
-          "desc": "Tebak-tebakan ala Cak Lontong (random)",
-          "path": "/game/caklontong",
-          "status": "ready",
-          "params": {}
-        },
-        {
-          "name": "Family 100",
-          "desc": "Game tebak jawaban populer (Family 100)",
-          "path": "/game/family100",
-          "status": "ready",
-          "params": {}
-        },
-        {
-          "name": "Siapakah Aku",
-          "desc": "Game deskripsi siapa aku",
-          "path": "/game/siapakahaku",
-          "status": "ready",
-          "params": {}
-        },
-        {
-          "name": "Susun Kata",
-          "desc": "Game menyusun kata acak",
-          "path": "/game/susunkata",
-          "status": "ready",
-          "params": {}
-        },
-        {
-          "name": "Tebak Gambar",
-          "desc": "Game tebak gambar",
-          "path": "/game/tebakgambar",
-          "status": "ready",
-          "params": {}
-        },
-        {
-          "name": "Tebak Lagu",
-          "desc": "Game tebak lagu",
-          "path": "/game/tebaklagu",
-          "status": "ready",
-          "params": {}
-        },
-        {
-          "name": "Tebak Logo",
-          "desc": "Game tebak logo brand",
-          "path": "/game/tebaklogo",
-          "status": "ready",
-          "params": {}
-        },
-        {
-          "name": "Tebak Makanan",
-          "desc": "Game tebak makanan daerah",
-          "path": "/game/tebakmakanan",
-          "status": "ready",
-          "params": {}
-        }
+        { "name": "Asah Otak", "desc": "Game soal pengetahuan umum", "path": "/game/asahotak", "status": "ready", "params": {} },
+        { "name": "Cak Lontong", "desc": "Tebak-tebakan ala Cak Lontong", "path": "/game/caklontong", "status": "ready", "params": {} },
+        { "name": "Family 100", "desc": "Game Family 100", "path": "/game/family100", "status": "ready", "params": {} },
+        { "name": "Kuis Merdeka", "desc": "Kuis seputar kemerdekaan", "path": "/game/kuismerdeka", "status": "ready", "params": {} },
+        { "name": "Siapakah Aku", "desc": "Game deskripsi siapa aku", "path": "/game/siapakahaku", "status": "ready", "params": {} },
+        { "name": "Susun Kata", "desc": "Game menyusun kata", "path": "/game/susunkata", "status": "ready", "params": {} },
+        { "name": "Tebak Bendera", "desc": "Game tebak bendera negara", "path": "/game/tebakbendera", "status": "ready", "params": {} },
+        { "name": "Tebak FF", "desc": "Tebak karakter Free Fire", "path": "/game/tebakepep", "status": "ready", "params": {} },
+        { "name": "Tebak Gambar", "desc": "Game tebak gambar", "path": "/game/tebakgambar", "status": "ready", "params": {} },
+        { "name": "Tebak Game", "desc": "Game tebak game populer", "path": "/game/tebakgame", "status": "ready", "params": {} },
+        { "name": "Tebak Jenaka", "desc": "Tebak-tebakan lucu", "path": "/game/tebakjenaka", "status": "ready", "params": {} },
+        { "name": "Tebak JKT48", "desc": "Tebak member JKT48", "path": "/game/tebakjkt48", "status": "ready", "params": {} },
+        { "name": "Tebak Kalimat", "desc": "Tebak kalimat peribahasa", "path": "/game/tebakkalimat", "status": "ready", "params": {} },
+        { "name": "Tebak Kata", "desc": "Game tebak kata", "path": "/game/tebakkata", "status": "ready", "params": {} },
+        { "name": "Tebak Kimia", "desc": "Tebak unsur kimia", "path": "/game/tebakkimia", "status": "ready", "params": {} },
+        { "name": "Tebak Kode", "desc": "Kuis logika & coding", "path": "/game/tebakkode", "status": "ready", "params": {} },
+        { "name": "Tebak Lagu", "desc": "Game tebak lagu", "path": "/game/tebaklagu", "status": "ready", "params": {} },
+        { "name": "Tebak Lirik", "desc": "Game tebak lirik lagu", "path": "/game/tebaklirik", "status": "ready", "params": {} },
+        { "name": "Tebak Logo", "desc": "Game tebak logo brand", "path": "/game/tebaklogo", "status": "ready", "params": {} },
+        { "name": "Tebak Makanan", "desc": "Tebak makanan daerah", "path": "/game/tebakmakanan", "status": "ready", "params": {} },
+        { "name": "Tebak ML", "desc": "Tebak hero Mobile Legends", "path": "/game/tebakml", "status": "ready", "params": {} },
+        { "name": "Tebak Pokemon", "desc": "Tebak pokemon", "path": "/game/tebakpokemon", "status": "ready", "params": {} },
+        { "name": "Tebak Pop", "desc": "Tebak idol / grup pop", "path": "/game/tebakpop", "status": "ready", "params": {} },
+        { "name": "Tebak Tebakan", "desc": "Tebak-tebakan umum", "path": "/game/tebaktebakan", "status": "ready", "params": {} },
+        { "name": "Tebak Tempat", "desc": "Tebak tempat terkenal", "path": "/game/tebaktempat", "status": "ready", "params": {} },
+        { "name": "Teka Teki", "desc": "Teka-teki lucu", "path": "/game/tekateki", "status": "ready", "params": {} }
       ]
     },
 
     {
       "name": "Random",
       "items": [
-        {
-          "name": "Blue Archive",
-          "desc": "Blue Archive Random Images",
-          "path": "/random/ba",
-          "status": "ready"
-        },
-        {
-          "name": "Cosplay",
-          "desc": "Random cosplay image",
-          "path": "/random/cosplay",
-          "status": "ready"
-        }
+        { "name": "Blue Archive", "desc": "Blue Archive Random Images", "path": "/random/ba", "status": "ready" },
+        { "name": "Cosplay", "desc": "Random cosplay image", "path": "/random/cosplay", "status": "ready" }
       ]
     },
 
@@ -146,9 +99,7 @@
           "desc": "Video search",
           "path": "/search/youtube?q=",
           "status": "ready",
-          "params": {
-            "q": "Search query"
-          }
+          "params": { "q": "Search query" }
         }
       ]
     }
