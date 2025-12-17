@@ -1,0 +1,97 @@
+{
+  "name": "ScrLxrd-API",
+  "version": "v1.0.0",
+  "description": "Simple and easy to use API.",
+  "bannerImage": "/src/banner.jpg",
+  "header": {
+    "status": "Online!"
+  },
+  "apiSettings": {
+    "creator": "XLawXD",
+    "apikey": ["ScrLxrd"]
+  },
+  "categories": [
+    {
+      "name": "AI (Artificial Intelligence)",
+      "items": [
+        {
+          "name": "LuminAI",
+          "desc": "Talk with luminai",
+          "path": "/ai/luminai?text=",
+          "status": "ready",
+          "params": {
+            "text": "Text for luminai to respond to"
+          }
+        },
+        {
+          "name": "HydroMind",
+          "desc": "See the list of supported AI models here: https://mind.hydrooo.web.id",
+          "path": "/ai/hydromind?text=&model=",
+          "status": "ready",
+          "params": {
+            "text": "Teks atau perintah untuk chat AI",
+            "model": "See the list of supported AI models here: https://mind.hydrooo.web.id"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Downloader",
+      "items": [
+        {
+          "name": "YouTube Audio",
+          "desc": "Download audio from YouTube (mp3/m4a/opus)",
+          "path": "/downloader/yta-clipto?url=",
+          "status": "ready",
+          "params": {
+            "url": "YouTube video URL"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Game",
+      "items": [
+        {
+          "name": "Asah Otak",
+          "desc": "Game soal pengetahuan umum (random)",
+          "path": "/game/asahotak",
+          "status": "ready",
+          "params": {}
+        },
+    {
+      "name": "Cak Lontong",
+      "desc": "Tebak-tebakan ala Cak Lontong (random)",
+      "path": "/game/caklontong",
+      "status": "ready",
+      "params": {}
+    }
+  ]
+},
+    {
+      "name": "Random",
+      "items": [
+        {
+          "name": "Blue Archive",
+          "desc": "Blue Archive Random Images",
+          "path": "/random/ba",
+          "status": "ready"
+        }
+      ]
+    },
+    {
+      "name": "Search Tools",
+      "items": [
+        {
+          "name": "YouTube",
+          "desc": "Video search",
+          "path": "/search/youtube?q=",
+          "status": "ready",
+          "params": {
+            "q": "Search query"
+          }
+        }
+      ]
+    }
+  ]
+}
