@@ -1,3 +1,4 @@
+
 {
   "name": "ScrLxrd-API",
   "version": "v1.0.0",
@@ -16,30 +17,21 @@
       "items": [
         {
           "name": "LuminAI",
-          "desc": "Talk with LuminAI",
+          "desc": "Talk with luminai",
           "path": "/ai/luminai?text=",
           "status": "ready",
           "params": {
-            "text": "Text for AI response"
+            "text": "Text for luminai to respond to"
           }
         },
         {
           "name": "HydroMind",
-          "desc": "Multiple AI models",
+          "desc": "See the list of supported AI models here: https://mind.hydrooo.web.id",
           "path": "/ai/hydromind?text=&model=",
           "status": "ready",
           "params": {
-            "text": "Prompt for AI",
-            "model": "Model ID"
-          }
-        },
-        {
-          "name": "HD Video (Upscale)",
-          "desc": "Upscale video to HD / 2K using AI",
-          "path": "/ai/hdvideo?url=",
-          "status": "ready",
-          "params": {
-            "url": "Direct MP4 video URL"
+            "text": "Teks atau perintah untuk chat AI",
+            "model": "Daftar model di https://mind.hydrooo.web.id"
           }
         }
       ]
@@ -63,28 +55,69 @@
     {
       "name": "Game",
       "items": [
-        { "name": "Asah Otak", "desc": "Soal pengetahuan umum", "path": "/game/asahotak", "status": "ready" },
-        { "name": "Cak Lontong", "desc": "Tebak-tebakan logika", "path": "/game/caklontong", "status": "ready" },
-        { "name": "Family 100", "desc": "Tebak jawaban populer", "path": "/game/family100", "status": "ready" },
-        { "name": "Siapakah Aku", "desc": "Tebak dari deskripsi", "path": "/game/siapakahaku", "status": "ready" },
-        { "name": "Susun Kata", "desc": "Susun kata acak", "path": "/game/susunkata", "status": "ready" },
-        { "name": "Tebak Bendera", "desc": "Tebak nama bendera negara", "path": "/game/tebakbendera", "status": "ready" },
-        { "name": "Tebak Gambar", "desc": "Game tebak gambar", "path": "/game/tebakgambar", "status": "ready" },
-        { "name": "Tebak Game", "desc": "Tebak game dari gambar", "path": "/game/tebakgame", "status": "ready" },
-        { "name": "Tebak Jenaka", "desc": "Tebak-tebakan lucu", "path": "/game/tebakjenaka", "status": "ready" },
-        { "name": "Tebak JKT48", "desc": "Tebak member JKT48", "path": "/game/tebakjkt48", "status": "ready" },
-        { "name": "Tebak Kata", "desc": "Tebak kata dari petunjuk", "path": "/game/tebakkata", "status": "ready" },
-        { "name": "Tebak Kimia", "desc": "Nama unsur kimia", "path": "/game/tebakkimia", "status": "ready" },
-        { "name": "Tebak Kode", "desc": "Soal logika pemrograman", "path": "/game/tebakkode", "status": "ready" },
-        { "name": "Tebak Lagu", "desc": "Tebak judul lagu", "path": "/game/tebaklagu", "status": "ready" },
-        { "name": "Tebak Lirik", "desc": "Lengkapi lirik lagu", "path": "/game/tebaklirik", "status": "ready" },
-        { "name": "Tebak Logo", "desc": "Tebak logo brand", "path": "/game/tebaklogo", "status": "ready" },
-        { "name": "Tebak Makanan", "desc": "Makanan khas daerah", "path": "/game/tebakmakanan", "status": "ready" },
-        { "name": "Tebak ML", "desc": "Hero Mobile Legends", "path": "/game/tebakml", "status": "ready" },
-        { "name": "Tebak Pokemon", "desc": "Tebak Pokémon", "path": "/game/tebakpokemon", "status": "ready" },
-        { "name": "Tebak Pop", "desc": "Tebak idol / grup pop", "path": "/game/tebakpop", "status": "ready" },
-        { "name": "Tebak Tempat", "desc": "Tebak tempat terkenal", "path": "/game/tebaktempat", "status": "ready" },
-        { "name": "Teka-Teki", "desc": "Teka-teki logika", "path": "/game/tekateki", "status": "ready" }
+        {
+          "name": "Asah Otak",
+          "desc": "Game soal pengetahuan umum",
+          "path": "/game/asahotak",
+          "status": "ready",
+          "params": {}
+        },
+        {
+          "name": "Cak Lontong",
+          "desc": "Tebak-tebakan ala Cak Lontong",
+          "path": "/game/caklontong",
+          "status": "ready",
+          "params": {}
+        },
+        {
+          "name": "Family 100",
+          "desc": "Game tebak jawaban populer",
+          "path": "/game/family100",
+          "status": "ready",
+          "params": {}
+        },
+        {
+          "name": "Siapakah Aku",
+          "desc": "Game deskripsi siapa aku",
+          "path": "/game/siapakahaku",
+          "status": "ready",
+          "params": {}
+        },
+        {
+          "name": "Susun Kata",
+          "desc": "Game menyusun kata acak",
+          "path": "/game/susunkata",
+          "status": "ready",
+          "params": {}
+        },
+        {
+          "name": "Tebak Gambar",
+          "desc": "Game tebak gambar",
+          "path": "/game/tebakgambar",
+          "status": "ready",
+          "params": {}
+        },
+        {
+          "name": "Tebak Lagu",
+          "desc": "Game tebak lagu",
+          "path": "/game/tebaklagu",
+          "status": "ready",
+          "params": {}
+        },
+        {
+          "name": "Tebak Logo",
+          "desc": "Game tebak logo",
+          "path": "/game/tebaklogo",
+          "status": "ready",
+          "params": {}
+        },
+        {
+          "name": "Tebak Makanan",
+          "desc": "Game tebak makanan daerah",
+          "path": "/game/tebakmakanan",
+          "status": "ready",
+          "params": {}
+        }
       ]
     },
 
@@ -93,7 +126,7 @@
       "items": [
         {
           "name": "Blue Archive",
-          "desc": "Random Blue Archive image",
+          "desc": "Random Blue Archive Image",
           "path": "/random/ba",
           "status": "ready"
         },
@@ -107,15 +140,46 @@
     },
 
     {
+      "name": "Stalk",
+      "items": [
+        {
+          "name": "Free Fire",
+          "desc": "Stalk akun Free Fire berdasarkan UID dan server",
+          "path": "/stalk/ff?uid=&server=",
+          "status": "ready",
+          "params": {
+            "uid": "Masukkan UID Free Fire",
+            "server": {
+              "type": "select",
+              "options": [
+                "ind",
+                "sg",
+                "br",
+                "ru",
+                "tw",
+                "vn",
+                "th",
+                "pk",
+                "me",
+                "cis",
+                "us"
+              ]
+            }
+          }
+        }
+      ]
+    },
+
+    {
       "name": "Search Tools",
       "items": [
         {
-          "name": "YouTube Search",
-          "desc": "Search video on YouTube",
+          "name": "YouTube",
+          "desc": "Search video YouTube",
           "path": "/search/youtube?q=",
           "status": "ready",
           "params": {
-            "q": "Search keyword"
+            "q": "Search query"
           }
         }
       ]
