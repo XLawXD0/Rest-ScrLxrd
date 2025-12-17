@@ -1,38 +1,53 @@
 const axios = require('axios');
 
-module.exports = (app) => {
+module.exports = function (app) {
+
+  const serverMap = {
+    id: 'id',
+    indonesia: 'id',
+
+    ind: 'ind', // India
+    india: 'ind',
+
+    sg: 'sg',
+    br: 'br',
+    us: 'us',
+    ru: 'ru',
+    th: 'th',
+    tw: 'tw',
+    vn: 'vn',
+    pk: 'pk',
+    me: 'me',
+    cis: 'cis'
+  };
 
   app.get('/stalk/ff', async (req, res) => {
     try {
       const { uid, server } = req.query;
 
-      // Validasi parameter
       if (!uid || !server) {
         return res.status(400).json({
           status: false,
-          message: 'Parameter uid dan server wajib diisi'
+          message: 'Parameter uid dan server wajib diisi',
+          example: '/stalk/ff?uid=7729408043&server=id'
         });
       }
 
-      const allowedServers = [
-        'ind', 'sg', 'br', 'ru', 'tw',
-        'vn', 'th', 'pk', 'me', 'cis', 'us'
-      ];
+      const inputServer = server.toLowerCase();
+      const realServer = serverMap[inputServer];
 
-      if (!allowedServers.includes(server.toLowerCase())) {
+      if (!realServer) {
         return res.status(400).json({
           status: false,
-          message: 'Server tidak valid',
-          available_server: allowedServers
+          message: 'Server tidak dikenali',
+          available: Object.keys(serverMap)
         });
       }
 
-      // Request ke API sumber
-      const apiUrl = `https://freefire-api-six.vercel.app/get_player_personal_show?server=${server.toLowerCase()}&uid=${uid}`;
+      const apiUrl =
+        `https://freefire-api-six.vercel.app/get_player_personal_show?server=${realServer}&uid=${uid}`;
 
-      const { data } = await axios.get(apiUrl, {
-        timeout: 15000
-      });
+      const { data } = await axios.get(apiUrl, { timeout: 15000 });
 
       if (!data || !data.basicinfo) {
         return res.status(404).json({
@@ -41,26 +56,21 @@ module.exports = (app) => {
         });
       }
 
-      // Response bersih & rapi
       res.json({
         status: true,
-        result: {
-          basicinfo: data.basicinfo,
-          profileinfo: data.profileinfo || {},
-          clanbasicinfo: data.clanbasicinfo || {},
-          petinfo: data.petinfo || {},
-          socialinfo: data.socialinfo || {},
-          creditscoreinfo: data.creditscoreinfo || {}
-        }
+        server: realServer.toUpperCase(),
+        uid,
+        result: data
       });
 
-    } catch (error) {
+    } catch (err) {
+      console.error('[FF STALK ERROR]', err.message);
+
       res.status(500).json({
         status: false,
         message: 'Gagal mengambil data Free Fire',
-        error: error.message
+        error: err.message
       });
     }
   });
-
 };
