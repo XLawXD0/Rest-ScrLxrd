@@ -105,6 +105,61 @@
         }
       ]
     },
+    
+    {
+      "name": "Random Text",
+      "items": [
+        {
+          "name": "Bijak",
+          "desc": "Kata-kata bijak random",
+          "path": "/randomtext/bijak",
+          "status": "ready"
+        },
+        {
+          "name": "Dare",
+          "desc": "Tantangan random (truth or dare)",
+          "path": "/randomtext/dare",
+          "status": "ready"
+        },
+        {
+          "name": "Fakta",
+          "desc": "Fakta unik random",
+          "path": "/randomtext/fakta",
+          "status": "ready"
+        },
+        {
+          "name": "Motivasi",
+          "desc": "Kata motivasi random",
+          "path": "/randomtext/motivasi",
+          "status": "ready"
+        },
+        {
+          "name": "Pantun",
+          "desc": "Pantun random",
+          "path": "/randomtext/pantun",
+          "status": "ready"
+        },
+        {
+          "name": "Quotes",
+          "desc": "Quotes random",
+          "path": "/randomtext/quotes",
+          "status": "ready"
+        },
+        {
+          "name": "Quotes Anime",
+          "desc": "Quotes anime random",
+          "path": "/randomtext/quotesanime",
+          "status": "ready"
+        },
+        {
+          "name": "Truth",
+          "desc": "Pertanyaan truth random",
+          "path": "/randomtext/truth",
+          "status": "ready"
+        }
+      ]
+    },
+    
       {
       "name": "Stalk",
       "items": [
