@@ -32,9 +32,19 @@
             "text": "Teks atau perintah untuk chat AI",
             "model": "See the list of supported AI models here: https://mind.hydrooo.web.id"
           }
+        },
+        {
+          "name": "UnlimitedAI",
+          "desc": "AI tanpa limit (scraping unlimitedai.org)",
+          "path": "/ai/unlimitedai?text=",
+          "status": "ready",
+          "params": {
+            "text": "Pertanyaan atau perintah ke AI"
+          }
         }
       ]
     },
+
     {
       "name": "Downloader",
       "items": [
@@ -49,6 +59,7 @@
         }
       ]
     },
+
     {
       "name": "Game",
       "items": [
@@ -59,15 +70,65 @@
           "status": "ready",
           "params": {}
         },
-    {
-      "name": "Cak Lontong",
-      "desc": "Tebak-tebakan ala Cak Lontong (random)",
-      "path": "/game/caklontong",
-      "status": "ready",
-      "params": {}
-    }
-  ]
-},
+        {
+          "name": "Cak Lontong",
+          "desc": "Tebak-tebakan ala Cak Lontong (random)",
+          "path": "/game/caklontong",
+          "status": "ready",
+          "params": {}
+        },
+        {
+          "name": "Family 100",
+          "desc": "Game tebak jawaban populer (Family 100)",
+          "path": "/game/family100",
+          "status": "ready",
+          "params": {}
+        },
+        {
+          "name": "Siapakah Aku",
+          "desc": "Game deskripsi siapa aku",
+          "path": "/game/siapakahaku",
+          "status": "ready",
+          "params": {}
+        },
+        {
+          "name": "Susun Kata",
+          "desc": "Game menyusun kata acak",
+          "path": "/game/susunkata",
+          "status": "ready",
+          "params": {}
+        },
+        {
+          "name": "Tebak Gambar",
+          "desc": "Game tebak gambar",
+          "path": "/game/tebakgambar",
+          "status": "ready",
+          "params": {}
+        },
+        {
+          "name": "Tebak Lagu",
+          "desc": "Game tebak lagu",
+          "path": "/game/tebaklagu",
+          "status": "ready",
+          "params": {}
+        },
+        {
+          "name": "Tebak Logo",
+          "desc": "Game tebak logo brand",
+          "path": "/game/tebaklogo",
+          "status": "ready",
+          "params": {}
+        },
+        {
+          "name": "Tebak Makanan",
+          "desc": "Game tebak makanan daerah",
+          "path": "/game/tebakmakanan",
+          "status": "ready",
+          "params": {}
+        }
+      ]
+    },
+
     {
       "name": "Random",
       "items": [
@@ -76,9 +137,16 @@
           "desc": "Blue Archive Random Images",
           "path": "/random/ba",
           "status": "ready"
+        },
+        {
+          "name": "Cosplay",
+          "desc": "Random cosplay image",
+          "path": "/random/cosplay",
+          "status": "ready"
         }
       ]
     },
+
     {
       "name": "Search Tools",
       "items": [
