@@ -51,7 +51,7 @@
         {
           "name": "YouTube Audio",
           "desc": "Download audio from YouTube",
-          "path": "/downloader/yta-clipto?url=",
+          "path": "/downloader/ytmp3?url=",
           "status": "ready",
           "params": {
             "url": "YouTube video URL"
