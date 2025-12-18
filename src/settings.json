@@ -197,23 +197,7 @@
           "status": "ready",
           "params": {
             "uid": "Masukkan UID Free Fire",
-            "server": {
-              "type": "select",
-              "options": [
-                "id",
-                "ind",
-                "sg",
-                "br",
-                "ru",
-                "tw",
-                "vn",
-                "th",
-                "pk",
-                "me",
-                "cis",
-                "us"
-              ]
-            }
+            "server": "Masukkan Region code negara anda"
           }
         },
         {
@@ -223,23 +207,7 @@
   "status": "ready",
   "params": {
     "uid": "Masukkan UID Free Fire",
-    "server": {
-      "type": "select",
-      "options": [
-        "id",
-        "ind",
-        "sg",
-        "br",
-        "ru",
-        "tw",
-        "vn",
-        "th",
-        "pk",
-        "me",
-        "cis",
-        "us"
-      ]
-    }
+    "server": "Masukkan Region code negara anda"
   }
 }
       ]
