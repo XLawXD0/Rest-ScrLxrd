@@ -217,34 +217,14 @@
           }
         },
         {
-  "name": "Free Fire Player Stats",
+  "name": "FreeFire Player Stats",
   "desc": "Stalk statistik player Free Fire (Solo, Duo, Squad)",
   "path": "/stalk/ffstats",
-  "params": {
-    "uid": "ID Player Free Fire",
-    "region": "ID | BR | SG | US | dll"
-  },
   "status": "ready",
   "params": {
-            "uid": "Masukkan UID Free Fire",
-            "server": {
-              "type": "select",
-              "options": [
-                "id",
-                "ind",
-                "sg",
-                "br",
-                "ru",
-                "tw",
-                "vn",
-                "th",
-                "pk",
-                "me",
-                "cis",
-                "us"
-              ]
-            }
-          }
+    "uid": "UID akun Free Fire",
+    "region": "ID | IND | BR | SG | US | VN | dll"
+  }
 }
       ]
     },
