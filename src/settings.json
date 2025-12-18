@@ -65,6 +65,24 @@
   "params": {
     "url": "YouTube video URL"
   }
+},
+{
+  "name": "TikTok Downloader",
+  "desc": "Download video TikTok tanpa watermark",
+  "path": "/downloader/tiktok?url=",
+  "status": "ready",
+  "params": {
+    "url": "Link video TikTok"
+  }
+},
+{
+  "name": "Spotify Downloader",
+  "desc": "Download audio dari Spotify",
+  "path": "/downloader/spotify?url=",
+  "status": "ready",
+  "params": {
+    "url": "Spotify track URL"
+  }
 }
       ]
     },
