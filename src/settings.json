@@ -224,7 +224,27 @@
     "uid": "ID Player Free Fire",
     "region": "ID | BR | SG | US | dll"
   },
-  "status": "ready"
+  "status": "ready",
+  "params": {
+            "uid": "Masukkan UID Free Fire",
+            "server": {
+              "type": "select",
+              "options": [
+                "id",
+                "ind",
+                "sg",
+                "br",
+                "ru",
+                "tw",
+                "vn",
+                "th",
+                "pk",
+                "me",
+                "cis",
+                "us"
+              ]
+            }
+          }
 }
       ]
     },
@@ -243,4 +263,4 @@
       ]
     }
   ]
-        }
+}
