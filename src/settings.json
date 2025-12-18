@@ -215,7 +215,17 @@
               ]
             }
           }
-        }
+        },
+        {
+  "name": "Free Fire Player Stats",
+  "desc": "Stalk statistik player Free Fire (Solo, Duo, Squad)",
+  "path": "/stalk/ffstats",
+  "params": {
+    "uid": "ID Player Free Fire",
+    "region": "ID | BR | SG | US | dll"
+  },
+  "status": "ready"
+}
       ]
     },
     {
@@ -229,17 +239,7 @@
           "params": {
             "q": "Search keyword"
           }
-        },
-        {
-  "name": "Free Fire Player Stats",
-  "desc": "Stalk statistik player Free Fire (Solo, Duo, Squad)",
-  "path": "/stalk/ffstats",
-  "params": {
-    "uid": "ID Player Free Fire",
-    "region": "ID | BR | SG | US | dll"
-    },
-  "status": "ready"
-  }
+        }
       ]
     }
   ]
