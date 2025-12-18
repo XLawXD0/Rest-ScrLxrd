@@ -4,11 +4,7 @@ module.exports = function (app) {
 
   const serverMap = {
     id: 'id',
-    indonesia: 'id',
-
-    ind: 'ind', // India
-    india: 'ind',
-
+    ind: 'ind',
     sg: 'sg',
     br: 'br',
     us: 'us',
