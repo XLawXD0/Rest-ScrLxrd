@@ -1,4 +1,4 @@
-
+const connectDB = require("./src/config/database");
 const express = require('express');
 const chalk = require('chalk');
 const fs = require('fs');
@@ -14,6 +14,8 @@ app.set("json spaces", 2);
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cors());
+
+connectDB();
 
 app.use('/', express.static(path.join(__dirname, 'api-page')));
 app.use('/src', express.static(path.join(__dirname, 'src')));
@@ -98,3 +100,4 @@ app.listen(PORT, () => {
 });
 
 module.exports = app;
+
