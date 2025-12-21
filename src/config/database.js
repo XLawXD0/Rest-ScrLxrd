@@ -1,19 +1,20 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 
-const MONGODB_URI = "mongodb+srv://deargodxd_db_user:DIVzneB6LzSRA12X@cluster0.f3o5o8x.mongodb.net/restapi?retryWrites=true&w=majority";
+let isConnected = false;
 
-async function connectDB() {
+module.exports = async function connectDB() {
+  if (isConnected) return;
+
   try {
-    await mongoose.connect(MONGODB_URI, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
+    const db = await mongoose.connect(process.env.MONGODB_URI, {
+      bufferCommands: false
     });
 
-    console.log("✅ MongoDB connected");
-  } catch (err) {
-    console.error("❌ MongoDB connection failed:", err.message);
-    process.exit(1);
-  }
-}
+    isConnected = db.connections[0].readyState;
+    console.log('MongoDB Connected');
 
-module.exports = connectDB;
+  } catch (err) {
+    console.error('MongoDB connection error:', err);
+    throw err;
+  }
+};
