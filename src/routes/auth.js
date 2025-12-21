@@ -1,93 +1,107 @@
-const express = require("express");
-const bcrypt = require("bcryptjs");
-const User = require("../models/User"); // sesuaikan path kalau beda
+const express = require('express');
+const bcrypt = require('bcryptjs');
+const User = require('../models/User');
+const generateApiKey = require('../utils/generateApiKey');
 
 const router = express.Router();
 
 /**
- * =========================
- * GET /auth/register
- * Untuk browser / dokumentasi
- * =========================
+ * REGISTER
  */
-router.get("/register", (req, res) => {
-  res.status(200).json({
-    status: true,
-    message: "Register endpoint",
-    method: "POST",
-    endpoint: "/auth/register",
-    required_body: {
-      username: "string",
-      email: "string",
-      password: "string"
-    },
-    example: {
-      username: "testuser",
-      email: "test@mail.com",
-      password: "123456"
-    }
-  });
-});
-
-/**
- * =========================
- * POST /auth/register
- * Proses register user
- * =========================
- */
-router.post("/register", async (req, res) => {
+router.post('/register', async (req, res) => {
   try {
     const { username, email, password } = req.body;
 
-    // Validasi input
     if (!username || !email || !password) {
       return res.status(400).json({
         status: false,
-        message: "Username, email, dan password wajib diisi"
+        message: 'Semua field wajib diisi'
       });
     }
 
-    // Cek user sudah ada
-    const existingUser = await User.findOne({
-      $or: [{ email }, { username }]
-    });
-
-    if (existingUser) {
-      return res.status(409).json({
+    const exists = await User.findOne({ email });
+    if (exists) {
+      return res.status(400).json({
         status: false,
-        message: "Username atau email sudah digunakan"
+        message: 'Email sudah terdaftar'
       });
     }
 
-    // Hash password
     const hashedPassword = await bcrypt.hash(password, 10);
 
-    // Simpan user
-    const newUser = new User({
+    const user = await User.create({
       username,
       email,
       password: hashedPassword,
-      plan: "free"
+      apiKey: generateApiKey()
     });
 
-    await newUser.save();
-
-    res.status(201).json({
+    res.json({
       status: true,
-      message: "Registrasi berhasil",
+      message: 'Registrasi berhasil',
       user: {
-        id: newUser._id,
-        username: newUser.username,
-        email: newUser.email,
-        plan: newUser.plan
+        id: user._id,
+        username: user.username,
+        email: user.email,
+        plan: user.plan
       }
     });
 
-  } catch (error) {
-    console.error("[REGISTER ERROR]", error);
+  } catch (err) {
     res.status(500).json({
       status: false,
-      message: "Terjadi kesalahan server"
+      message: 'Registrasi gagal',
+      error: err.message
+    });
+  }
+});
+
+/**
+ * LOGIN
+ */
+router.post('/login', async (req, res) => {
+  try {
+    const { email, password } = req.body;
+
+    if (!email || !password) {
+      return res.status(400).json({
+        status: false,
+        message: 'Email dan password wajib diisi'
+      });
+    }
+
+    const user = await User.findOne({ email });
+    if (!user) {
+      return res.status(404).json({
+        status: false,
+        message: 'User tidak ditemukan'
+      });
+    }
+
+    const match = await bcrypt.compare(password, user.password);
+    if (!match) {
+      return res.status(401).json({
+        status: false,
+        message: 'Password salah'
+      });
+    }
+
+    res.json({
+      status: true,
+      message: 'Login berhasil',
+      data: {
+        username: user.username,
+        email: user.email,
+        plan: user.plan,
+        apiKey: user.apiKey
+      }
+    });
+
+  } catch (err) {
+    res.status(500).json({
+      status: false,
+      message: 'Login gagal',
+      error: err.message
     });
   }
 });
