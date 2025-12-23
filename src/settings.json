@@ -108,6 +108,7 @@
         { "name": "Tebak Logo", "desc": "Tebak logo brand", "path": "/game/tebaklogo", "status": "ready" },
         { "name": "Tebak Makanan", "desc": "Makanan khas daerah", "path": "/game/tebakmakanan", "status": "ready" },
         { "name": "Tebak ML", "desc": "Hero Mobile Legends", "path": "/game/tebakml", "status": "ready" },
+        { "name": "Tebak Free Fire", "desc": "Karakter Free Fire", "path": "/game/tebakepep", "status": "ready" },
         { "name": "Tebak Pokemon", "desc": "Tebak Pokémon", "path": "/game/tebakpokemon", "status": "ready" },
         { "name": "Tebak Pop", "desc": "Tebak idol / grup pop", "path": "/game/tebakpop", "status": "ready" },
         { "name": "Tebak Tempat", "desc": "Tebak tempat terkenal", "path": "/game/tebaktempat", "status": "ready" },
